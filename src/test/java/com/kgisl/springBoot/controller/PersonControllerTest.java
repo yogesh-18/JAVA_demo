@@ -2,6 +2,7 @@ package com.kgisl.springBoot.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
@@ -35,7 +36,7 @@ public class PersonControllerTest {
     @Test
     public void getallPersonsTest() {
         expected = Arrays.asList(person1, person2);
-        //System.out.println(expected);
+        // System.out.println(expected);
         when(personService.getAllPersons()).thenReturn(expected);
         ResponseEntity<List<Person>> actual = personController.getAllPersons();
         assertNotNull(actual);
@@ -44,7 +45,7 @@ public class PersonControllerTest {
     }
 
     @Test
-    public void getPersonByIdTest(){
+    public void getPersonByIdTest() {
         Long id = 1l;
         when(personService.getPersonById(id)).thenReturn(person1);
         ResponseEntity<Person> actual = personController.getPersonById(id);
@@ -52,7 +53,7 @@ public class PersonControllerTest {
     }
 
     @Test
-    public void updatePersonTest(){
+    public void updatePersonTest() {
         Person person = new Person(1l, "yogesh", "yogesh.gmail.com");
         Person updatedperson = new Person(1l, "Yogesh", "yogesh.email.com");
         Long id = 1l;
@@ -61,6 +62,23 @@ public class PersonControllerTest {
         assertNotNull(actual);
         assertEquals(updatedperson, actual.getBody());
         assertEquals(HttpStatus.ACCEPTED, actual.getStatusCode());
+    }
+
+    @Test
+    public void createPersonTest() {
+        when(personService.createPerson(person1)).thenReturn(person1);
+        ResponseEntity<Person> actual = personController.createPerson(person1);
+        assertNotNull(actual);
+        assertEquals(person1, actual.getBody());
+        assertEquals(HttpStatus.ACCEPTED, actual.getStatusCode());
+    }
+
+    @Test
+    public void deletePersonTest() {
+        Long id = 1l;
+        //when(personService.getPersonById(id)).thenReturn(person1);
+        personController.deletePerson(id);
+        verify(personService).deletePerson(id);
     }
 
 }

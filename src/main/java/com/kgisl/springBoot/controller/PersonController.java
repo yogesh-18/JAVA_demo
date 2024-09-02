@@ -15,42 +15,41 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kgisl.springBoot.entity.Person;
 import com.kgisl.springBoot.service.PersonService;
 
-
 @RequestMapping("/person")
 @RestController
 public class PersonController {
-    @Autowired
-    PersonService personService;
+	@Autowired
+	PersonService personService;
 
 	@GetMapping
-	public ResponseEntity<List<Person>> getAllPersons(){
+	public ResponseEntity<List<Person>> getAllPersons() {
 		List<Person> persons = personService.getAllPersons();
-		return  new ResponseEntity<>(persons,HttpStatus.OK);
+		return new ResponseEntity<>(persons, HttpStatus.OK);
 	}
 
 	@PostMapping
-	public void createPerson(@RequestBody Person person){
-		personService.createPerson(person);
-		
+	public ResponseEntity<Person> createPerson(@RequestBody Person person) {
+		Person newPerson = personService.createPerson(person);
+		return new ResponseEntity<>(newPerson,HttpStatus.ACCEPTED);
+
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Person> getPersonById(@PathVariable Long id){
+	public ResponseEntity<Person> getPersonById(@PathVariable Long id) {
 		Person person = personService.getPersonById(id);
-		return new ResponseEntity<>(person, person!=null ? HttpStatus.OK : HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(person, person != null ? HttpStatus.OK : HttpStatus.NOT_FOUND);
 	}
 
 	@PutMapping("/update/{id}")
-    public ResponseEntity<Person> updatePerson(@PathVariable Long id, @RequestBody Person updatedPerson) {
-        Person person =  personService.updatePerson(updatedPerson);
-		return new ResponseEntity<>(person,HttpStatus.ACCEPTED);
+	public ResponseEntity<Person> updatePerson(@PathVariable Long id, @RequestBody Person updatedPerson) {
+		Person person = personService.updatePerson(updatedPerson);
+		return new ResponseEntity<>(person, HttpStatus.ACCEPTED);
 	}
+
 	@DeleteMapping("/{id}")
-	public ResponseEntity<String> deletePerson(@PathVariable Long id){
+	public ResponseEntity<String> deletePerson(@PathVariable Long id) {
 		personService.deletePerson(id);
-		return new ResponseEntity<>("Deleted successfully",HttpStatus.OK);
+		return new ResponseEntity<>("Deleted successfully", HttpStatus.OK);
 	}
 
-
-	
 }

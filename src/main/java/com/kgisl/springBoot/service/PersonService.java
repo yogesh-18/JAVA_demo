@@ -7,11 +7,11 @@ import com.kgisl.springBoot.entity.Person;
 public interface PersonService {
     List<Person> getAllPersons();
  
-    void createPerson(Person person);
+    Person createPerson(Person person);
  
     Person getPersonById(Long id);
  
     Person updatePerson(Person updatedPerson);
  
     void deletePerson(Long id);
-}
+} 

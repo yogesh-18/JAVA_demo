@@ -21,8 +21,8 @@ public class PersonServiceImpl implements PersonService{
     }
 
     @Override
-    public void createPerson(Person person) {
-         personRepository.save(person);
+    public Person createPerson(Person person) {
+        return personRepository.save(person);
     }
 
     @Override

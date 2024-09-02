@@ -1,4 +1,20 @@
-*[INFO ]-- Starting Application using Java 21.0.2 with PID 17524 (D:\springboot\springBoot\target\classes started by yogesh.s in D:\springboot\springBoot)--
+*[INFO ]-- Starting ApplicationTests using Java 21.0.2 with PID 4112 (started by yogesh.s in D:\springboot\springBoot)--
+*[INFO ]-- No active profile set, falling back to 1 default profile: "default"--
+*[INFO ]-- HikariPool-1 - Starting...--
+*[INFO ]-- HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/springBoot user=SA--
+*[INFO ]-- HikariPool-1 - Start completed.--
+*[INFO ]-- Started ApplicationTests in 8.837 seconds (process running for 12.227)--
+*[INFO ]-- HikariPool-1 - Shutdown initiated...--
+*[INFO ]-- HikariPool-1 - Shutdown completed.--
+*[INFO ]-- Starting ApplicationTests using Java 21.0.2 with PID 6308 (started by yogesh.s in D:\springboot\springBoot)--
+*[INFO ]-- No active profile set, falling back to 1 default profile: "default"--
+*[INFO ]-- HikariPool-1 - Starting...--
+*[INFO ]-- HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/springBoot user=SA--
+*[INFO ]-- HikariPool-1 - Start completed.--
+*[INFO ]-- Started ApplicationTests in 7.432 seconds (process running for 10.611)--
+*[INFO ]-- HikariPool-1 - Shutdown initiated...--
+*[INFO ]-- HikariPool-1 - Shutdown completed.--
+*[INFO ]-- Starting Application using Java 21.0.2 with PID 23044 (D:\springboot\springBoot\target\classes started by yogesh.s in D:\springboot\springBoot)--
 *[INFO ]-- No active profile set, falling back to 1 default profile: "default"--
 *[INFO ]-- Starting service [Tomcat]--
 *[INFO ]-- Starting Servlet engine: [Apache Tomcat/10.1.28]--
@@ -6,33 +22,40 @@
 *[INFO ]-- HikariPool-1 - Starting...--
 *[INFO ]-- HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/springBoot user=SA--
 *[INFO ]-- HikariPool-1 - Start completed.--
-*[INFO ]-- Started Application in 3.036 seconds (process running for 3.393)--
-*[WARN ]-- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m28s362ms930µs).--
+*[INFO ]-- Started Application in 4.584 seconds (process running for 5.177)--
 *[INFO ]-- Initializing Spring DispatcherServlet 'dispatcherServlet'--
-*[INFO ]-- Init duration for springdoc-openapi is: 172 ms--
-*[INFO ]-- HikariPool-1 - Shutdown initiated...--
-*[INFO ]-- HikariPool-1 - Shutdown completed.--
-*[INFO ]-- Starting ApplicationTests using Java 21.0.2 with PID 16424 (started by yogesh.s in D:\springboot\springBoot)--
-*[INFO ]-- No active profile set, falling back to 1 default profile: "default"--
-*[INFO ]-- HikariPool-1 - Starting...--
-*[INFO ]-- HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/springBoot user=SA--
-*[INFO ]-- HikariPool-1 - Start completed.--
-*[INFO ]-- Started ApplicationTests in 6.073 seconds (process running for 8.609)--
-*[INFO ]-- HikariPool-1 - Shutdown initiated...--
-*[INFO ]-- HikariPool-1 - Shutdown completed.--
-*[INFO ]-- Starting ApplicationTests using Java 21.0.2 with PID 10684 (started by yogesh.s in D:\springboot\springBoot)--
-*[INFO ]-- No active profile set, falling back to 1 default profile: "default"--
-*[INFO ]-- HikariPool-1 - Starting...--
-*[INFO ]-- HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/springBoot user=SA--
-*[INFO ]-- HikariPool-1 - Start completed.--
-*[INFO ]-- Started ApplicationTests in 5.144 seconds (process running for 7.129)--
-*[INFO ]-- HikariPool-1 - Shutdown initiated...--
-*[INFO ]-- HikariPool-1 - Shutdown completed.--
-*[INFO ]-- Starting ApplicationTests using Java 21.0.2 with PID 19172 (started by yogesh.s in D:\springboot\springBoot)--
-*[INFO ]-- No active profile set, falling back to 1 default profile: "default"--
-*[INFO ]-- HikariPool-1 - Starting...--
-*[INFO ]-- HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/springBoot user=SA--
-*[INFO ]-- HikariPool-1 - Start completed.--
-*[INFO ]-- Started ApplicationTests in 5.001 seconds (process running for 7.191)--
+*[INFO ]-- Init duration for springdoc-openapi is: 438 ms--
+*[INFO ]-- Before method:List com.kgisl.springBoot.service.PersonServiceImpl.getAllPersons()--
+*[INFO ]-- Class Name :  com.kgisl.springBoot.service.PersonServiceImpl--
+*[INFO ]-- Entering in Method :  getAllPersons--
+*[INFO ]-- Arguments :  []--
+*[INFO ]-- After method:List com.kgisl.springBoot.service.PersonServiceImpl.getAllPersons()--
+*[INFO ]-- Class Name :  com.kgisl.springBoot.service.PersonServiceImpl--
+*[INFO ]-- Entering in Method :  getAllPersons--
+*[INFO ]-- Arguments :  []--
+*[INFO ]-- Before method:Person com.kgisl.springBoot.service.PersonServiceImpl.createPerson(Person)--
+*[INFO ]-- Class Name :  com.kgisl.springBoot.service.PersonServiceImpl--
+*[INFO ]-- Entering in Method :  createPerson--
+*[INFO ]-- Arguments :  [Person[id=null, uname=yogesh, email=yog]]--
+*[INFO ]-- After method:Person com.kgisl.springBoot.service.PersonServiceImpl.createPerson(Person)--
+*[INFO ]-- Class Name :  com.kgisl.springBoot.service.PersonServiceImpl--
+*[INFO ]-- Entering in Method :  createPerson--
+*[INFO ]-- Arguments :  [Person[id=null, uname=yogesh, email=yog]]--
+*[INFO ]-- Before method:Person com.kgisl.springBoot.service.PersonServiceImpl.getPersonById(Long)--
+*[INFO ]-- Class Name :  com.kgisl.springBoot.service.PersonServiceImpl--
+*[INFO ]-- Entering in Method :  getPersonById--
+*[INFO ]-- Arguments :  [72]--
+*[INFO ]-- After method:Person com.kgisl.springBoot.service.PersonServiceImpl.getPersonById(Long)--
+*[INFO ]-- Class Name :  com.kgisl.springBoot.service.PersonServiceImpl--
+*[INFO ]-- Entering in Method :  getPersonById--
+*[INFO ]-- Arguments :  [72]--
+*[INFO ]-- Before method:void com.kgisl.springBoot.service.PersonServiceImpl.deletePerson(Long)--
+*[INFO ]-- Class Name :  com.kgisl.springBoot.service.PersonServiceImpl--
+*[INFO ]-- Entering in Method :  deletePerson--
+*[INFO ]-- Arguments :  [72]--
+*[INFO ]-- After method:void com.kgisl.springBoot.service.PersonServiceImpl.deletePerson(Long)--
+*[INFO ]-- Class Name :  com.kgisl.springBoot.service.PersonServiceImpl--
+*[INFO ]-- Entering in Method :  deletePerson--
+*[INFO ]-- Arguments :  [72]--
 *[INFO ]-- HikariPool-1 - Shutdown initiated...--
 *[INFO ]-- HikariPool-1 - Shutdown completed.--
